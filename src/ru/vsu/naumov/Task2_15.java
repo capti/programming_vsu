@@ -2,7 +2,7 @@ package ru.vsu.naumov;
 
 import java.util.Scanner;
 
-public class Task2_17 {
+public class Task2_15 {
 
 
     public void main(String[] args) {
