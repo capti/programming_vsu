@@ -70,3 +70,12 @@ class Triangle {
 
 
 }
+
+
+public double calculateGeron() {
+   return (Math.sqrt(calculateHalfPerimetr * (calculateHalfPerimetr - sideA) * (calculateHalfPerimetr - sideB) * (calculateHalfPerimetr - SideC)));
+}
+
+public double calculateHeight() {
+    return ((2 / sideA) * calculateGeron)
+}
