@@ -9,16 +9,16 @@ public class Task1_17 {
     }
 
     public static double AreaAngles(double R2){
-        return (((4 * Math.pow(R2,2)) - (Math.PI * Math.pow(R2,2)))); // площадь закрашенных углов
+        return (((((4 * Math.pow(R2,2)) - (Math.PI * Math.pow(R2,2))) / 4)) / 2); // площадь закрашенных углов
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите радиус малой окружности: ");
+        System.out.print("Введите радиус малой окружности = ");
         double r1 = scanner.nextDouble();
 
-        System.out.print("Введите радиус большей окружности: ");
+        System.out.print("Введите радиус большей окружности = ");
         double R2 = scanner.nextDouble();
 
         double AreaPainted = AreaTriangles(r1) + AreaAngles(R2);
