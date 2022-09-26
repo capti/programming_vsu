@@ -24,24 +24,24 @@ public class Task2_15 {
     }
 
     private static void checkPossibilityRadius(Triangle triangle, double radius) {
-        if (calculateGeron(triangle) == calculateGeron(triangle, radius)) {
+        if (calculateGeron(triangle) == calculateAreaWithRadius(triangle, radius)) {
             System.out.println("Окружность может быть вписана в треугольник");
         } else {
             System.out.println("Окружность не может быть вписана в треугольник");
         }
     }
 
-    private static double calculateGeron(Triangle triangle, double radius) {
-        final double halfPerimeter = triangle.calculateHalfPerimeter();
-        return Math.sqrt(halfPerimeter * (halfPerimeter - triangle.getSideA()) * (halfPerimeter - triangle.getSideB()) * (halfPerimeter - triangle.getSideC()));
-    }
 
+
+    // это считает значение по формуле Герона
     private static double calculateGeron(Triangle triangle) {
         final double halfPerimeter = triangle.calculateHalfPerimeter();
         return Math.sqrt(halfPerimeter * (halfPerimeter - triangle.getSideA()) * (halfPerimeter - triangle.getSideB()) * (halfPerimeter - triangle.getSideC()));
     }
 
-    private static double countAreaWithRadius(Triangle triangle, double radius) {
+
+    // это считает значение с радиусом
+    private static double calculateAreaWithRadius(Triangle triangle, double radius) {
         return radius * triangle.calculateHalfPerimeter();
     }
 
